@@ -32,11 +32,11 @@ In the `config.js` file within the root folder, enter your BSC wallet address an
 
 For example
 
-const config = {
-
-mainAcc 0x1a1111aa11a11aaa111a11a1a1a1a1111a1a11a1,
-
-pkey 123123123123123123123123123123123123123123123123123123123123,
+>const config = {
+>
+>mainAcc 0x1a1111aa11a11aaa111a11a1a1a1a1111a1a11a1,
+>
+>pkey 123123123123123123123123123123123123123123123123123123123123,
 
 It is recommended that you use the default trade size (1.7 WBNB). Please ensure you have sufficient balance in your BSC wallet. If you wish to change this, please enter your chosen trade amount (in wei format) within the double quotes of the `inputAmount` property.
 
@@ -89,9 +89,9 @@ Creates a list of all the pairs that contain a specified token from a specified 
 
 Any of these tools can be run by doing the following from your terminal once inside the merlin root folder
 
-cd tools
-
-node (tool-name)
+>cd tools
+>
+>node (tool-name)
 
 ### Legal
 
