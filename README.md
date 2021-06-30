@@ -1,8 +1,8 @@
 # merlin
 
-Binance Smart Chain node.js script arbitrage trading bot.
+A Binance Smart Chain node.js script arbitrage trading bot.
 
-The bot takes circular routes (e.g. WBNB - BUSD - CAKE - WBNB) in a single trade.
+Merlin takes circular routes (e.g. WBNB - BUSD - CAKE - WBNB) in a single trade.
 
 ## General
 
