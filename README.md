@@ -89,7 +89,7 @@ Creates a list of all the pairs that contain a specified token from a specified 
 
 Any of these tools can be run by doing the following from your terminal once inside the merlin root folder
 
->cd tools
+>cd Tools
 >
 >node (tool-name)
 
