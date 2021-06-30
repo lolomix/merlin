@@ -1,0 +1,19 @@
+{
+  "name": "bsc-merlin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "merlin": "node merlin.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ethereumjs-common": "^1.5.2",
+    "ethereumjs-tx": "^2.1.2",
+    "fs": "0.0.1-security",
+    "node-localstorage": "^2.1.6",
+    "web3": "^1.3.5"
+  }
+}
