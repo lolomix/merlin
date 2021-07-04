@@ -54,9 +54,10 @@ In your terminal and with node.js installed, cd into the merlin root folder and 
 
 ---
 
-Once the relevant node packages are installed, you can run merlin in two modes
+Once the relevant node packages are installed, you can run merlin in two modes: infinite-loop or 1 hours instance.
 
 `node merlin` or `npm run merlin` to run merlin on an infinite loop.
+
 `node main` to run merlin for one hour.
 
 Please note, you may need to restart merlin every 24 hours or so.
@@ -67,13 +68,13 @@ Please be aware that you need BNB to trade on Binance Smart Chain. There is no f
 
 ---
 
-Some tools have been included to assist with administration of new exchangespoolstokens.
+Some tools have been included to assist with administration of new exchanges/pools/tokens.
 
 Tools are seperate javascript files that contain code to run specific functions that may assist you. They either print output to the `pools.txt` file within the Tools folder, or by printing output directly to the console. In the case of tools that print output to the `pools.txt` file, you may wish to delete the contents of the file between uses.
 
 In order to use these files, you should update the files with the relevant information such as factory contract address for the exchanges or abi for contracts where necessary.
 
-The tools available are
+The tools available are:
 
 **checkPairs**
 Checks whether the pairs in the `pools.js` file are formatted correctly for a specified exchange, i.e. whether they are the right way round and whether they are named correctly.
