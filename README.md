@@ -14,7 +14,7 @@ Some factors should be taken into consideration
 
 The default RPC Endpoint is "https://bsc-dataseed.binance.org". This is free to use, however has a rate-limit of 2000 calls per minute. Merlin functions by calling the RPC to get liquidity pool reserve values. In order to stay within this limit, reserve values for only 17 pools may be requested from the RPC on every call iteration.
 
-Owing to the rate-limit, using the public RPC Endpoint means that you can only use one exchange at a time. The default is set to Pancake Swap V2. Exchanges can be activtated or deactivated by commenting un-commenting the exchange objects in the `exchanges.js` file within the Index folder. Please ensure to also comment un-comment respective liquidity pools within the `pools.js` file within the Index folder.
+Owing to the rate-limit, using the public RPC Endpoint means that you can only use one exchange at a time. The default is set to Pancake Swap V2. Exchanges can be activtated or deactivated by commenting / un-commenting the exchange objects in the `exchanges.js` file within the Index folder. Please ensure to also comment / un-comment respective liquidity pools within the `pools.js` file within the Index folder.
 
 You can add new tokens, pools or exchanges by entering their valid details in the same format as shown in the respective `tokens.js`, `pools.js` and `exchanges.js` files within the Index folder.
 
@@ -34,13 +34,13 @@ For example
 
 >const config = {
 >
->mainAcc 0x1a1111aa11a11aaa111a11a1a1a1a1111a1a11a1,
+>mainAcc: "0x1a1111aa11a11aaa111a11a1a1a1a1111a1a11a1",
 >
->pkey 123123123123123123123123123123123123123123123123123123123123,
+>pkey: "123123123123123123123123123123123123123123123123123123123123",
 
-It is recommended that you use the default trade size (1.7 WBNB). Please ensure you have sufficient balance in your BSC wallet. If you wish to change this, please enter your chosen trade amount (in wei format) within the double quotes of the `inputAmount` property.
+It is recommended that you use the default trade size (1.7 WBNB entered as "1700000000000000000"). Please ensure you have sufficient balance in your BSC wallet. If you wish to change this, please enter your chosen trade amount (in wei format) within the double quotes of the `inputAmount` property.
 
-The base currency is set as WBNB. It is recommended that you stay with this as it is the highest volume most liquid coin on Binance Smart Chain however you can also use BUSD if you prefer, although please ensure to change the other relevant propertyvariable values such as `inputAmount`, `minGain` and `tradeCost`. If you wish to use another coin as the base currency, you can do so but you must ensure that sufficient pool addresses to allow a reasonable number of circular trades are being analysed by adding pools on the used exchange(s) to the `pools.js` file inside the Index folder.
+The base currency is set as "WBNB". It is recommended that you stay with this as it is the highest volume most liquid coin on Binance Smart Chain however you can also use "BUSD" if you prefer, although please ensure to change the other relevant property or variable values such as `inputAmount`, `minGain` and `tradeCost`. If you wish to use another coin as the base currency, you can do so but you must ensure that sufficient pool addresses to allow a reasonable number of circular trades are being analysed by adding pools on the used exchange(s) to the `pools.js` file inside the Index folder.
 
 The trigger gain property (`minGain`) is set to 0.417%. This is the amount of profit that, if anticipated, the bot will take a trade. If you wish to change this, please also calculate a new trade cost value to enter into the double quotes of the `tradeCost` variable on line 26. This is the anticipated cost (in wei format) calculated in the base currency, taking into account the specified gas price. Please also note that circular trades require more mining than normal transactions, so gas costs will likely be higher than a standard swap for example.
 
