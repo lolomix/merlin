@@ -54,7 +54,7 @@ In your terminal and with node.js installed, cd into the merlin root folder and 
 
 ---
 
-Once the relevant node packages are installed, you can run merlin in two modes: infinite-loop or 1 hours instance.
+Once the relevant node packages are installed, you can run merlin in two modes: infinite-loop or 1 hour instance.
 
 `node merlin` or `npm run merlin` to run merlin on an infinite loop.
 
