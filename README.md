@@ -12,7 +12,7 @@ Merlin will likely not be successful in most taken trades as the time-window for
 
 Some factors should be taken into consideration
 
-The default RPC Endpoint is httpsbsc-dataseed.binance.org. This is free to use, however has a rate-limit of 2000 calls per minute. Merlin functions by calling the RPC to get liquidity pool reserve values. In order to stay within this limit, reserve values for only 17 pools may be requested from the RPC on every call iteration.
+The default RPC Endpoint is "https://bsc-dataseed.binance.org". This is free to use, however has a rate-limit of 2000 calls per minute. Merlin functions by calling the RPC to get liquidity pool reserve values. In order to stay within this limit, reserve values for only 17 pools may be requested from the RPC on every call iteration.
 
 Owing to the rate-limit, using the public RPC Endpoint means that you can only use one exchange at a time. The default is set to Pancake Swap V2. Exchanges can be activtated or deactivated by commenting un-commenting the exchange objects in the `exchanges.js` file within the Index folder. Please ensure to also comment un-comment respective liquidity pools within the `pools.js` file within the Index folder.
 
@@ -20,7 +20,7 @@ You can add new tokens, pools or exchanges by entering their valid details in th
 
 You may be able to make more calls to the blockchain if you are using a private RPC Endpoint. If you are using a private RPC (http or wss), you can change the settings in the `config.js` file within the root folder.
 
-It is possible to use a private RPC Endpoint for just the transactions, if you wish to benefit from faster transaction speeds. Just create a new property in the config.js file, such as `txRPC` and import it as a variable into the `transact.js` file in the Functions folder. Then, within the `transact.js` file, adjust the web3 instantiation according.
+It is possible to use a private RPC Endpoint for just the transactions, if you wish to benefit from faster transaction speeds. Just create a new property in the config.js file, such as `txRPC` and import it as a variable into the `transact.js` file in the Functions folder. Then, within the `transact.js` file, adjust the web3 instantiation accordingly.
 
 ## Usage
 
