@@ -75,19 +75,19 @@ In order to use these files, you should update the files with the relevant infor
 
 The tools available are
 
-checkPairs
+**checkPairs**
 Checks whether the pairs in the `pools.js` file are formatted correctly for a specified exchange, i.e. whether they are the right way round and whether they are named correctly.
 
-excess
+**excess**
 Checks pools from the `pools.js` file for a specified exchange to check for pools that are not sufficiently connected to other currencies. Pools that are returned in an array in the console should be deleted as they are not useful for circular trades.
 
-getAllPairs
+**getAllPairs**
 Creates a list of all pairs returned from the factory contract that are not present in the `pools.js` file in the Index folder but for which both tokens are already known. This will output a list to the `pools.txt` file in the Tools folder. If the token is known to merlin (i.e. it is listed in the tokens.js file in the Index folder) then the token name will be shown, otherwise the BSC contract address of the token will be displayed. It is recommended that if you are using the `getAllPairs` tool to find new pools to add, you should first check the balances of the pools at www.bscscan.com to ensure that the reserve values are sufficient for your trade size.
 
-getPairs
+**getPairs**
 Creates a list of all the pairs that contain a specified token from a specified exchange factory contract, showing only those pairs that merlin doesn't already know about. This will output a list to the `pools.txt` file in the Tools folder. It is recommended that if you are using the `getPairs` tool to find new pools to add, you should first check the balances of the pools at www.bscscan.com to ensure that the reserve values are sufficient for your trade size.
 
-Any of these tools can be run by doing the following from your terminal once inside the merlin root folder
+Any of these tools can be run by doing the following from your terminal once inside the merlin root folder:
 
 >cd Tools
 >
