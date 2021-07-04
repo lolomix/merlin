@@ -2,13 +2,15 @@
 
 A Binance Smart Chain node.js script arbitrage trading bot.
 
-Merlin takes circular routes (e.g. WBNB - BUSD - CAKE - WBNB) in a single trade.
+Merlin takes circular routes (e.g. WBNB -> BUSD -> CAKE -> WBNB) in a single trade.
 
 ## General
 
 Merlin takes circular trades from a set base currency, looking for a minimum profit. Binance Smart Chain is a suitable host for this type of bot owing to the fast transaction times and low gas costs.
 
-Merlin will likely not be successful in most taken trades as the time-window for executing a profitable trade is incredible slim. However in high-volume periods, Merlin can perform profitably, making more on successful trades than the sum of trading costs. If a trade would be executed for any type of loss, the transaction will be reverted and no swap will take place, you will only be charged the gas cost of mining. These 'failed' transactions will show an error message of insufficient output amount on www.bscscan.com because the return amount will be below the specified minimum return amount for the transaction. Successful transactions will appear as completed transactions on www.bscscan.com and will have been executed because at least the `inputAmount` plus the value of `tradeCost` was recovered by the output amount of the transaction.
+Circular trades are swaps where you exchange a base currency for (hopefully a larger amount of) itself by swapping through multiple other currencies in one transaction. For instance, you could swap WBNB for BUSD, then BUSD for CAKE, and then CAKE back to WBNB. The smart contract functions of exchanges such as PancakeSwap enable this owing to the 'routes' paramater accepted by the function call. Merlin looks for arbitrage opportunities through these circular swaps and sends transactions only when it anticipates a predefined threshhold profit. 
+
+Merlin will likely not be successful in most taken trades as the time-window for executing a profitable trade is incredible narrow. However, during high-volume periods, Merlin can perform profitably, making more on successful trades than the sum of trading costs. If a trade would be executed for any type of loss, the transaction will be reverted and no swap will take place, you will only be charged the gas cost of mining. These 'failed' transactions will show an error message of insufficient output amount on www.bscscan.com because the return amount will be below the specified minimum return amount for the transaction. Successful transactions will appear as completed transactions on www.bscscan.com and will have been executed because at least the `inputAmount` plus the value of `tradeCost` was recovered by the output amount of the transaction.
 
 Some factors should be taken into consideration
 
